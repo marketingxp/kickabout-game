@@ -9,7 +9,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="font-heading text-3xl sm:text-4xl text-white mb-10 uppercase text-center"
+          className="font-heading text-3xl sm:text-4xl text-white mb-10 pb-8 uppercase text-center max-w-[480px] mx-auto"
         >
           The Future of Football: Mixed Reality Gaming
         </motion.h2>

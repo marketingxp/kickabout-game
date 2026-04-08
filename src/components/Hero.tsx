@@ -7,24 +7,27 @@ export default function Hero() {
     >
       {/* Hero background image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/kickabout.jpg" 
-          alt="Kickabout mixed-reality football game - playing digital football at home with a real ball" 
+        <img
+          src="/images/kickabout.jpg"
+          alt="Kickabout mixed-reality football game - playing digital football at home with a real ball"
           className="w-full h-full object-cover object-top opacity-90"
-          referrerPolicy="no-referrer"
+          fetchPriority="high"
+          decoding="async"
         />
         
         {/* Mixed Reality Overlays */}
         {/* Digital Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
         
-        {/* Scanning Line */}
-        <motion.div 
-          initial={{ top: "-10%" }}
-          animate={{ top: "110%" }}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-          className="absolute left-0 right-0 h-[2px] bg-white/20 shadow-[0_0_15px_rgba(255,255,255,0.5)] z-10"
-        />
+        {/* Scanning Line — uses transform (GPU-composited, no layout recalc) */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+          <motion.div
+            initial={{ y: "-10vh" }}
+            animate={{ y: "110vh" }}
+            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            className="absolute left-0 right-0 h-[2px] bg-white/20 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+          />
+        </div>
 
         {/* HUD Elements */}
         <div className="absolute inset-8 border border-white/10 pointer-events-none">
@@ -37,20 +40,11 @@ export default function Hero() {
 
       {/* Top: Logo + Subtitle */}
       <div className="relative z-10 text-center pt-12 sm:pt-20 px-4">
-        <motion.h1 
-          animate={{ 
-            textShadow: [
-              "0 0 0px rgba(255,255,255,0)",
-              "0 0 10px rgba(255,255,255,0.5)",
-              "0 0 0px rgba(255,255,255,0)"
-            ],
-            opacity: [1, 0.95, 1, 0.98, 1]
-          }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] text-white leading-[0.7] mb-4 uppercase"
+        <h1
+          className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] text-white leading-[0.7] mb-4 uppercase animate-hero-glow"
         >
           Kickabout
-        </motion.h1>
+        </h1>
         <motion.h2 
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
