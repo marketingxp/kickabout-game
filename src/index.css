@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Marvin Visions", "Russo One", sans-serif;
+  --font-body: "Meiryo", "Chakra Petch", sans-serif;
+  
+  --color-primary: #7C3AED;
+  --color-primary-light: #A78BFA;
+  --color-cta: #F43F5E;
+  --color-cta-hover: #E11D48;
+  --color-surface: #0F0F23;
+  --color-surface-light: #1A1A3E;
+  --color-surface-lighter: #252552;
+  --color-text: #E2E8F0;
+  --color-text-muted: #94A3B8;
+}
+
+@font-face {
+  font-family: 'Marvin Visions';
+  src: url('/fonts/MarvinVisionsBig-Bold.eot');
+  src: url('/fonts/MarvinVisionsBig-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/MarvinVisionsBig-Bold.woff2') format('woff2'),
+       url('/fonts/MarvinVisionsBig-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    @apply font-body antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    text-shadow: 0 0 40px rgba(124, 58, 237, 0.5), 0 0 80px rgba(124, 58, 237, 0.2);
+  }
+
+  .glow-cta {
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.4), 0 0 60px rgba(244, 63, 94, 0.15);
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .tracking-\[0\.2em\] {
+    --tw-tracking: 0.2em;
+    letter-spacing: 0em;
+  }
+
+  .tracking-\[0\.1em\] {
+    --tw-tracking: 0.1em;
+    letter-spacing: 0em;
+  }
+}
+
+h2.font-heading.text-3xl.sm\:text-4xl.text-white.mb-10.uppercase.text-center {
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
