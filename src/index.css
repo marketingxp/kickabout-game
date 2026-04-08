@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Explicit source paths prevent Tailwind scanning all of node_modules */
+@source "../index.html";
+@source "./**/*.{tsx,ts}";
+
 @theme {
   --font-heading: "Marvin Visions", "Russo One", sans-serif;
   --font-body: "Meiryo", "Chakra Petch", sans-serif;
