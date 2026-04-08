@@ -15,6 +15,11 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    optimizeDeps: {
+      // @google/genai is not imported anywhere yet — exclude it from
+      // pre-bundling to avoid a multi-minute hang on first build.
+      exclude: ['@google/genai'],
+    },
     build: {
       rollupOptions: {
         output: {
