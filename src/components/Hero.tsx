@@ -48,7 +48,7 @@ export default function Hero() {
         <motion.h2 
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          className="font-heading text-2xl sm:text-3xl md:text-4xl text-white tracking-[0.2em] uppercase"
+          className="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-[0.2em] uppercase"
         >
           Mixed - Reality Football
         </motion.h2>
