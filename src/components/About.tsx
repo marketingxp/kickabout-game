@@ -20,7 +20,7 @@ export default function About() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-text text-lg sm:text-xl leading-relaxed mb-8"
         >
-          Kickabout is building a new category in gaming: mixed-reality football. For the first time, players can play a digital football match at home using a real ball. Our patented hardware replaces pressing buttons with real ball striking and body movement, turning physical play directly into live gameplay. This is a breakthrough in how football is played. It brings digital football closer to a real game experience.
+          <span className="font-heading uppercase">Kickabout</span> is building a new category in gaming: mixed-reality football. For the first time, players can play a digital football match at home using a real ball. Our patented hardware replaces pressing buttons with real ball striking and body movement, turning physical play directly into live gameplay. This is a breakthrough in how football is played. It brings digital football closer to a real game experience.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 40 }}
@@ -30,7 +30,7 @@ export default function About() {
           className="text-text-muted text-lg sm:text-xl leading-relaxed"
         >
           <span className="block font-heading text-xl sm:text-2xl text-white uppercase mb-4">The Development</span>
-          Kickabout has been in development for several years, with multiple generations of working prototypes. We have run extensive playtesting with children, refining the experience based on real usage and feedback. Players quickly understand and engage with the product, with strong early reactions during testing. Backed by over £1 million in funding, we are now building the team to bring Kickabout to market.
+          <span className="font-heading uppercase">Kickabout</span> has been in development for several years, with multiple generations of working prototypes. We have run extensive playtesting with children, refining the experience based on real usage and feedback. Players quickly understand and engage with the product, with strong early reactions during testing. Backed by over £1 million in funding, we are now building the team to bring Kickabout to market.
         </motion.p>
       </div>
     </section>
