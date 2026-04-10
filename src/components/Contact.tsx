@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 sm:py-32 overflow-hidden bg-surface">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cta/10 rounded-full blur-[80px] pointer-events-none" />
+    <section id="contact" className="relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-surface to-[#0D1B69]">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#1D4ED8]/15 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -18,9 +18,9 @@ export default function Contact() {
           <p className="text-text-muted text-lg max-w-xl mx-auto mb-10">
             Interested in Kickabout? We're building the team and looking for the right partners.
           </p>
-          <a 
+          <a
             href="mailto:darren@kickabout.game"
-            className="inline-block bg-cta hover:bg-cta-hover text-white font-semibold text-lg px-10 py-4 rounded-full transition-all duration-200 cursor-pointer glow-cta"
+            className="btn-neon inline-block text-white font-semibold text-lg px-10 py-4 cursor-pointer"
           >
             darren@kickabout.game
           </a>
