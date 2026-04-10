@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section 
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-black"
+    <section
+      className="relative min-h-dvh flex flex-col justify-between overflow-hidden bg-black"
     >
       {/* Hero background image */}
       <div className="absolute inset-0 z-0">
@@ -39,7 +39,7 @@ export default function Hero() {
       </div>
 
       {/* Top: Logo + Subtitle */}
-      <div className="relative z-10 text-center pt-12 sm:pt-20 px-4">
+      <div className="relative z-10 text-center pt-8 sm:pt-20 px-4">
         <h1
           className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] text-white leading-[0.7] mb-4 uppercase animate-hero-glow"
         >
@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="flex-1" />
 
       {/* Bottom: Tagline */}
-      <div className="relative z-10 text-center px-4 pb-24">
+      <div className="relative z-10 text-center px-4 pb-12 sm:pb-24">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
