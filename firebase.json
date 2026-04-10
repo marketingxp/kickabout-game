@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "kickabout-c5ea7",
     "public": "dist",
     "ignore": [
       "firebase.json",

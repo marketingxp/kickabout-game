@@ -24,5 +24,4 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: matt-harrison-800f9
-          target: kickabout-c5ea7
+          projectId: kickabout-c5ea7
