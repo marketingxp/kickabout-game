@@ -44,6 +44,15 @@
    block (not swap): brief invisible period instead of a fallback-font flash —
    with the preload the font is normally ready before first paint. */
 @font-face {
+  font-family: 'Marvin Visions';
+  src: url('/fonts/MarvinVisionsBig-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Fallback heading font for browsers without woff2 support */
+@font-face {
   font-family: 'Russo One';
   src: url('/fonts/RussoOne-Regular.woff2') format('woff2');
   font-weight: 400;
