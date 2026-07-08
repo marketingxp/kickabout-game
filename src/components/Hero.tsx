@@ -41,14 +41,14 @@ export default function Hero() {
       {/* Top: Logo + Subtitle */}
       <div className="relative z-10 text-center pt-8 sm:pt-20 px-4">
         <h1
-          className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] text-white leading-[0.7] mb-4 uppercase animate-hero-glow"
+          className="font-heading text-[clamp(3.25rem,13vw,8rem)] text-white leading-[0.7] mb-4 uppercase animate-hero-glow"
         >
           Kickabout
         </h1>
-        <motion.h2 
+        <motion.h2
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          className="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-[0.2em] uppercase"
+          className="font-heading text-[clamp(1.05rem,4.5vw,3rem)] text-white tracking-[0.15em] sm:tracking-[0.2em] uppercase whitespace-nowrap"
         >
           Mixed - Reality Football
         </motion.h2>
@@ -64,7 +64,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           className="inline-block"
         >
-          <p className="font-heading text-white tracking-[0.1em] uppercase text-xl sm:text-2xl md:text-3xl lg:text-[2rem] relative">
+          <p className="font-heading text-white tracking-[0.1em] uppercase text-[clamp(0.9rem,3.7vw,2rem)] whitespace-nowrap relative">
             <span className="relative z-10">Real Ball - Real Match - Play Online</span>
             <motion.span 
               animate={{ x: [-2, 2, -2], opacity: [0, 0.3, 0] }}
