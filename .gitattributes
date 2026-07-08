@@ -1,0 +1,14 @@
+# Ensure binary assets are never treated as text (line-ending or
+# encoding normalization corrupts them).
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
