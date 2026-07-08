@@ -29,6 +29,17 @@
   50% { text-shadow: 0 0 10px rgba(255,255,255,0.5); opacity: 0.95; }
 }
 
+/* Registered so the conic-gradient angle can be animated (rotating neon edge) */
+@property --btn-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes neon-spin {
+  to { --btn-angle: 360deg; }
+}
+
 @font-face {
   font-family: 'Marvin Visions';
   src: url('/fonts/MarvinVisionsBig-Bold.eot');
@@ -73,21 +84,22 @@
   .btn-neon-glow::before {
     content: '';
     position: absolute;
-    inset: -4px;
+    inset: -6px;
     background: conic-gradient(
-      from 0deg,
-      #ff00cc, #0066ff, #00ffcc, #ffee00, #ff3300, #ff00cc
+      from var(--btn-angle),
+      #ff00cc, #ff8800, #ffee00, #00ff66, #0066ff, #cc00ff, #ff00cc
     );
-    filter: blur(16px);
-    opacity: 0.5;
+    filter: blur(18px);
+    opacity: 0.75;
     transition: opacity 0.3s ease;
   }
 
   .btn-neon-glow:hover::before {
-    opacity: 0.85;
+    opacity: 1;
   }
 
-  /* Hexagon: rainbow gradient shows only as a border ring around the dark centre */
+  /* Hexagon: rainbow gradient shows only as a border ring around the dark centre.
+     Warm hues sit on the right side so the edge doesn't vanish into the blue bg. */
   .btn-neon {
     position: relative;
     isolation: isolate;
@@ -96,22 +108,27 @@
       calc(100% - 22px) 100%, 22px 100%, 0 50%
     );
     background: conic-gradient(
-      from 0deg,
-      #ff00cc, #cc00ff, #6600ff, #0066ff,
-      #00ccff, #00ffcc, #00ff66, #aaff00,
-      #ffee00, #ff8800, #ff3300, #ff0066,
-      #ff00cc
+      from var(--btn-angle),
+      #ff00cc 0deg, #ff3300 60deg, #ff8800 100deg, #ffee00 140deg,
+      #00ff66 180deg, #00ccff 210deg, #0066ff 240deg, #6600ff 270deg,
+      #cc00ff 320deg, #ff00cc 360deg
     );
+  }
+
+  /* Neon edge rotates clockwise on hover — halo spins in sync with the border */
+  .btn-neon-glow:hover::before,
+  .btn-neon-glow:hover .btn-neon {
+    animation: neon-spin 2s linear infinite;
   }
 
   /* Dark centre — paints above the gradient, below the text */
   .btn-neon::before {
     content: '';
     position: absolute;
-    inset: 2px;
+    inset: 3px;
     clip-path: polygon(
-      21px 0, calc(100% - 21px) 0, 100% 50%,
-      calc(100% - 21px) 100%, 21px 100%, 0 50%
+      20px 0, calc(100% - 20px) 0, 100% 50%,
+      calc(100% - 20px) 100%, 20px 100%, 0 50%
     );
     background: var(--color-surface);
     z-index: -1;
