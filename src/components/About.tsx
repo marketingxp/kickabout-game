@@ -1,18 +1,22 @@
 import { motion } from "motion/react";
+import StaggeredText from "./StaggeredText";
 
 export default function About() {
   return (
     <div className="relative py-20 sm:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="font-heading text-3xl sm:text-4xl text-white mb-10 pb-8 uppercase text-center max-w-[480px] mx-auto"
-        >
-          The Future of Football: Mixed Reality Gaming
-        </motion.h2>
+        <StaggeredText
+          as="h2"
+          text="The Future of Football:|Mixed Reality Gaming"
+          separator="|"
+          segmentBy="words"
+          direction="top"
+          delay={80}
+          duration={0.6}
+          blur={true}
+          staggerDirection="forward"
+          className="font-heading text-3xl sm:text-4xl text-white mb-10 pb-8 uppercase text-center"
+        />
         <motion.p 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
