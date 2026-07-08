@@ -39,7 +39,7 @@ export default function Hero() {
       </div>
 
       {/* Top: Logo + Subtitle */}
-      <div className="relative z-10 text-center pt-8 sm:pt-20 px-4">
+      <div className="relative z-10 text-center pt-15 sm:pt-20 px-4">
         <h1
           className="font-heading text-[clamp(3.25rem,13vw,8rem)] text-white leading-[0.7] mb-4 uppercase animate-hero-glow"
         >
