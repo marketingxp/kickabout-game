@@ -9,10 +9,13 @@
     <!-- Preload LCP hero image -->
     <link rel="preload" as="image" href="/images/kickabout.jpg" fetchpriority="high" />
 
+    <!-- Preload heading font — its URL is otherwise only discovered after the CSS bundle loads, causing a flash of fallback font -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/RussoOne-Regular.woff2" crossorigin />
+
     <!-- Google Fonts: preconnect then non-blocking stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" />
     <meta name="description" content="Experience Kickabout, the revolutionary mixed-reality football game. Play digital football at home using a real ball. Join the future of football gaming today." />
     <meta name="keywords" content="kickabout, kickabout game, football mixed reality game, AR football, mixed reality sports, digital football" />
     <link rel="canonical" href="https://kickabout-c5ea7.web.app" />
