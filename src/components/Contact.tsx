@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function Contact() {
   return (
-    <div id="contact" className="relative py-24 sm:py-32">
+    <div id="contact" className="relative pt-24 pb-32 sm:pt-32 sm:pb-44">
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

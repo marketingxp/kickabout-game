@@ -40,15 +40,15 @@
   to { --btn-angle: 360deg; }
 }
 
+/* Self-hosted heading font: no third-party round-trip, preloaded in index.html.
+   block (not swap): brief invisible period instead of a fallback-font flash —
+   with the preload the font is normally ready before first paint. */
 @font-face {
-  font-family: 'Marvin Visions';
-  src: url('/fonts/MarvinVisionsBig-Bold.eot');
-  src: url('/fonts/MarvinVisionsBig-Bold.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/MarvinVisionsBig-Bold.woff2') format('woff2'),
-       url('/fonts/MarvinVisionsBig-Bold.woff') format('woff');
-  font-weight: 700;
+  font-family: 'Russo One';
+  src: url('/fonts/RussoOne-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @layer base {
