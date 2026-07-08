@@ -2,9 +2,7 @@ import { motion } from "motion/react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#1D4ED8]/15 rounded-full blur-[80px] pointer-events-none" />
-
+    <div id="contact" className="relative py-24 sm:py-32">
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -29,6 +27,6 @@ export default function Contact() {
           </span>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

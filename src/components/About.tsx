@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function About() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <div className="relative py-20 sm:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -33,6 +33,6 @@ export default function About() {
           The <span className="font-heading uppercase">Kickabout</span> concept has been explored and refined over several years through a series of prototype and proof-of-concept iterations. Throughout this process we have tested the concept with children to validate both the gameplay experience and the underlying technology, using their feedback to shape the product. Early testing has demonstrated strong engagement and given us confidence in the opportunity as we move into full commercial development.
         </motion.p>
       </div>
-    </section>
+    </div>
   );
 }
